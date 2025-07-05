@@ -29,7 +29,7 @@ tokenizer = AutoTokenizer.from_pretrained(model_name)
 text = "Look on my Works, ye Mighty, and despair!"
 encoded_inputs = tokenizer.encode_plus(text, truncation=True, return_tensors="pt")
 
-visualiser = AttentionVisualiserPytorch(model, tokenizer)
+visualiser = AttentionVisualiser(model, tokenizer)
 
 # visualise from the first attn layer
 visualiser.visualise_attn_layer(0, encoded_inputs)
@@ -52,4 +52,4 @@ uv run pytest
 uv run pytest --cov --cov-report=xml
 ```
 
-alternatively you can use the devcontainer.
+alternatively, you can use the devcontainer.
