@@ -1,10 +1,10 @@
 import pytest
 import numpy as np
 import torch
-from visualiser.pt import AttentionVisualiserPytorch
+from visualiser import AttentionVisualiser
 
 
-class TestAttentionVisualiserPytorch:
+class TestAttentionVisualiser:
     @pytest.fixture
     def mock_model(self):
         class MockConfig:
@@ -38,7 +38,7 @@ class TestAttentionVisualiserPytorch:
 
     @pytest.fixture
     def visualiser(self, mock_model, mock_tokenizer):
-        return AttentionVisualiserPytorch(
+        return AttentionVisualiser(
             model=mock_model,
             tokenizer=mock_tokenizer,
         )
@@ -74,8 +74,8 @@ class TestAttentionVisualiserPytorch:
         return torch.ones((1, 12, 4, 4)) * 0.25
 
     def test_init(self, mock_model, mock_tokenizer):
-        """Test initialization of AttentionVisualiserPytorch."""
-        visualiser = AttentionVisualiserPytorch(mock_model, mock_tokenizer)
+        """Test initialization of AttentionVisualiser."""
+        visualiser = AttentionVisualiser(mock_model, mock_tokenizer)
 
         assert visualiser.model == mock_model
         assert visualiser.tokenizer == mock_tokenizer

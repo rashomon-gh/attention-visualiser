@@ -13,8 +13,6 @@ dependencies = [
 
 [dependency-groups]
 dev = [
-    "flax>=0.10.5",
-    "jax>=0.6.0",
     "pre-commit>=4.2.0",
     "pytest>=8.3.5",
     "pytest-cov>=6.1.1",

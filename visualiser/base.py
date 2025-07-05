@@ -5,7 +5,6 @@ from transformers import AutoTokenizer, AutoModel, FlaxAutoModel
 from transformers import BatchEncoding
 from loguru import logger
 from einops import rearrange
-import jax.numpy as jnp
 from abc import ABC, abstractmethod
 import numpy as np
 
@@ -94,9 +93,7 @@ class BaseAttentionVisualiser(ABC):
         pass
 
     @abstractmethod
-    def get_attention_vector_mean(
-        attention: torch.Tensor | jnp.ndarray, axis: int = 0
-    ) -> np.ndarray:
+    def get_attention_vector_mean(attention: torch.Tensor, axis: int = 0) -> np.ndarray:
         """Calculate mean of attention vectors along specified axis.
 
         This method must be implemented by concrete subclasses to handle

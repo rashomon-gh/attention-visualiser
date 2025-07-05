@@ -18,3 +18,6 @@ wheels/
 # pytest
 .coverage
 coverage.xml
+
+# macos
+.DS_Store
