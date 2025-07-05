@@ -1,2 +1,3 @@
-from .pt import AttentionVisualiserPytorch as AttentionVisualiserPytorch
-from .flx import AttentionVisualiserFlax as AttentionVisualiserFlax
+from .pt import AttentionVisualiserPytorch as AttentionVisualiser
+
+__all__ = ["AttentionVisualiser"]
