@@ -51,5 +51,3 @@ uv run pytest
 # tests with coverage
 uv run pytest --cov --cov-report=xml
 ```
-
-alternatively, you can use the devcontainer.
