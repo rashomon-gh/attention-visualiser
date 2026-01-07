@@ -5,7 +5,7 @@ A module to visualise attention layer activations from transformer based models 
 ## installation
 
 ```bash
-pip install pip install attention-visualiser
+pip install attention-visualiser
 ```
 
 ## usage
