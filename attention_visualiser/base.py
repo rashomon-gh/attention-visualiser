@@ -7,6 +7,7 @@ from loguru import logger
 from einops import rearrange
 from abc import ABC, abstractmethod
 import numpy as np
+from typing import Optional
 
 
 class BaseAttentionVisualiser(ABC):
@@ -26,7 +27,7 @@ class BaseAttentionVisualiser(ABC):
         self,
         model: AutoModel | FlaxAutoModel,
         tokenizer: AutoTokenizer,
-        config: dict = None,
+        config: Optional[dict] = None,
     ) -> None:
         """Initialize the attention visualizer with a model and tokenizer.
 
@@ -44,7 +45,7 @@ class BaseAttentionVisualiser(ABC):
         self.model = model
         self.tokenizer = tokenizer
 
-        logger.info(f"Model config: {self.model.config}")
+        logger.info(f"Model config: {self.model.config}")  # type: ignore
 
         if not config:
             self.config = {
@@ -74,7 +75,7 @@ class BaseAttentionVisualiser(ABC):
         Returns:
             List of token strings corresponding to the input IDs
         """
-        tokens = self.tokenizer.convert_ids_to_tokens(encoded_input["input_ids"][0])
+        tokens = self.tokenizer.convert_ids_to_tokens(encoded_input["input_ids"][0])  # type: ignore
         return tokens
 
     @abstractmethod
@@ -93,7 +94,9 @@ class BaseAttentionVisualiser(ABC):
         pass
 
     @abstractmethod
-    def get_attention_vector_mean(attention: torch.Tensor, axis: int = 0) -> np.ndarray:
+    def get_attention_vector_mean(
+        self, attention: torch.Tensor, axis: int = 0
+    ) -> np.ndarray:
         """Calculate mean of attention vectors along specified axis.
 
         This method must be implemented by concrete subclasses to handle
@@ -152,6 +155,6 @@ class BaseAttentionVisualiser(ABC):
         )
 
         plt.title(f"Attention Weights for Layer idx: {idx}")
-        plt.xlabel(self.config.get("xlabel"))
-        plt.ylabel(self.config.get("ylabel"))
+        plt.xlabel(self.config.get("xlabel"))  # type: ignore
+        plt.ylabel(self.config.get("ylabel"))  # type: ignore
         plt.show()

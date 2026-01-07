@@ -11,7 +11,7 @@ pip install git+https://codeberg.org/rashomon/attention-visualiser
 ## usage
 
 ```python
-from visualiser import AttentionVisualiser
+from attention_visualiser import AttentionVisualiser
 from transformers import AutoModel, AutoTokenizer
 
 # visualising activations from gpt

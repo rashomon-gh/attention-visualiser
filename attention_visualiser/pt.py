@@ -1,8 +1,9 @@
 import torch
 from transformers import AutoTokenizer, AutoModel
 from transformers import BatchEncoding
-from .base import BaseAttentionVisualiser
+from attention_visualiser.base import BaseAttentionVisualiser
 import numpy as np
+from typing import Optional
 
 
 class AttentionVisualiserPytorch(BaseAttentionVisualiser):
@@ -19,7 +20,7 @@ class AttentionVisualiserPytorch(BaseAttentionVisualiser):
     """
 
     def __init__(
-        self, model: AutoModel, tokenizer: AutoTokenizer, config: dict = None
+        self, model: AutoModel, tokenizer: AutoTokenizer, config: Optional[dict] = None
     ) -> None:
         """Initialize the PyTorch-specific attention visualizer.
 
@@ -48,7 +49,7 @@ class AttentionVisualiserPytorch(BaseAttentionVisualiser):
 
         # else recompute
         with torch.no_grad():
-            output = self.model(**encoded_input, output_attentions=True)
+            output = self.model(**encoded_input, output_attentions=True)  # type: ignore
 
         attentions = output.attentions
 

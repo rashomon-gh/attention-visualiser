@@ -1,7 +1,7 @@
 import pytest
 import numpy as np
 import torch
-from visualiser import AttentionVisualiser
+from attention_visualiser import AttentionVisualiser
 
 
 class TestAttentionVisualiser:
@@ -19,7 +19,7 @@ class TestAttentionVisualiser:
             def __call__(self, **kwargs):
                 self.call_count += 1
                 self.last_kwargs = kwargs
-                return self.output
+                return self.output  # type: ignore
 
         model = MockModel()
         return model
