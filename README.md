@@ -1,11 +1,11 @@
 # attention-visualiser
 
-a module to visualise attention layer activations from transformer based models from huggingface
+A module to visualise attention layer activations from transformer based models from huggingface
 
 ## installation
 
 ```bash
-pip install git+https://codeberg.org/rashomon/attention-visualiser
+pip install pip install attention-visualiser
 ```
 
 ## usage
