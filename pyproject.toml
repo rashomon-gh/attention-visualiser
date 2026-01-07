@@ -10,6 +10,13 @@ dependencies = [
     "seaborn>=0.13.2",
     "transformers>=4.51.3",
 ]
+license = { file = "LICENSE" }
+
+[project.urls]
+"Homepage" = "https://codeberg.org/rashomon/attention-visualiser"
+"Repository" = "https://codeberg.org/rashomon/attention-visualiser.git"
+"Issues" = "https://codeberg.org/rashomon/attention-visualiser/issues"
+
 
 [dependency-groups]
 dev = [
