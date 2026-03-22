@@ -1,7 +1,7 @@
 import torch
 import matplotlib.pyplot as plt
 import seaborn as sns
-from transformers import AutoTokenizer, AutoModel, FlaxAutoModel
+from transformers import AutoTokenizer, AutoModel
 from transformers import BatchEncoding
 from loguru import logger
 from einops import rearrange
@@ -25,7 +25,7 @@ class BaseAttentionVisualiser(ABC):
 
     def __init__(
         self,
-        model: AutoModel | FlaxAutoModel,
+        model: AutoModel,
         tokenizer: AutoTokenizer,
         config: Optional[dict] = None,
     ) -> None:
