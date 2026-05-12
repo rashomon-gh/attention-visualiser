@@ -20,6 +20,7 @@ license = { file = "LICENSE" }
 
 [dependency-groups]
 dev = [
+    "pdoc>=16.0.0",
     "pre-commit>=4.2.0",
     "pytest>=8.3.5",
     "pytest-cov>=6.1.1",
