@@ -4,7 +4,7 @@ This script loads a GPT model and visualizes the attention weights from
 the first attention layer for a sample input text.
 """
 
-from attention_visualiser import AttentionVisualiser
+from attention_visualiser.visualiser import AttentionVisualiser
 from transformers import AutoModel, AutoTokenizer
 
 if __name__ == "__main__":
