@@ -15,7 +15,7 @@ pip install attention-visualiser
 ## usage
 
 ```python
-from attention_visualiser import AttentionVisualiser
+from attention_visualiser.visualiser import AttentionVisualiser
 from transformers import AutoModel, AutoTokenizer
 
 # visualising activations from gpt

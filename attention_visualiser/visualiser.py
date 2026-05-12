@@ -6,7 +6,7 @@ import numpy as np
 from typing import Optional
 
 
-class AttentionVisualiserPytorch(BaseAttentionVisualiser):
+class AttentionVisualiser(BaseAttentionVisualiser):
     """Attention visualizer for PyTorch-based transformer models.
 
     This class implements the abstract methods from BaseAttentionVisualiser
