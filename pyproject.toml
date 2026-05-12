@@ -13,13 +13,14 @@ dependencies = [
 license = { file = "LICENSE" }
 
 [project.urls]
-"Homepage" = "https://codeberg.org/rashomon/attention-visualiser"
-"Repository" = "https://codeberg.org/rashomon/attention-visualiser.git"
-"Issues" = "https://codeberg.org/rashomon/attention-visualiser/issues"
+"Homepage" = "https://github.com/rashomon-gh/attention-visualiser"
+"Repository" = "https://github.com/rashomon-gh/attention-visualiser.git"
+"Issues" = "https://github.com/rashomon-gh/attention-visualiser/issues"
 
 
 [dependency-groups]
 dev = [
+    "pdoc>=16.0.0",
     "pre-commit>=4.2.0",
     "pytest>=8.3.5",
     "pytest-cov>=6.1.1",
