@@ -14,6 +14,6 @@ Example:
     >>> visualiser.visualise_attn_layer(0, encoded)
 """
 
-from .pt import AttentionVisualiserPytorch as AttentionVisualiser
+from .visualiser import AttentionVisualiserPytorch as AttentionVisualiser
 
 __all__ = ["AttentionVisualiser"]
