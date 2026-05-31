@@ -26,7 +26,7 @@ model.eval()
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 
 text = "Look on my Works, ye Mighty, and despair!"
-encoded_inputs = tokenizer.encode_plus(text, truncation=True, return_tensors="pt")
+encoded_inputs = tokenizer(text, truncation=True, return_tensors="pt")
 
 visualiser = AttentionVisualiser(model, tokenizer)
 
