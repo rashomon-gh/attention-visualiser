@@ -8,7 +8,7 @@ dependencies = [
     "einops>=0.8.2",
     "loguru>=0.7.3",
     "seaborn>=0.13.2",
-    "transformers==5.13.1",
+    "transformers==5.14.1",
 ]
 license = { file = "LICENSE" }
 
