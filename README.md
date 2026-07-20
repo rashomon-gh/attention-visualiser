@@ -1,4 +1,6 @@
 # attention-visualiser
+# MOVED TO CODEBERG
+https://codeberg.org/rashomon/attention-visualiser
 
 | Status | Coverage |
 |--------|----------|
